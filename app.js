@@ -9,7 +9,13 @@ function calculaMedia(){
 
  const media = (nota1+nota2)/2
 
-resultado.innerHTML = `a media e ${media}`
+ if (media < 5){
+
+resultado.innerHTML = `sua media e ${media.toFixed(2)}.voce esta reprovado`
+}else{
+  resultado.innerHTML = `Sua Media foi ${media.toFixed(2)}. Parabens voce esta aprovado`
 }
 
+
 button.addEventListener("click", calculaMedia)
+}
